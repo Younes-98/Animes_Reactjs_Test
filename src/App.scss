@@ -1,0 +1,532 @@
+$colorwhite: #F7F7F7;
+$colorprimary: #4334C8;
+$colorprimary2: #EAE8FF;
+
+body {
+    background: $colorwhite;
+    box-sizing: border-box;
+    height: 104vh;
+}
+
+.menu{
+    z-index: 1000;
+    display: flex;
+    text-align: center;
+
+    .recherche{
+        position: relative;
+        input{
+            padding-left: 56px;
+            padding: 10px, 16px, 10px, 16px;
+            width: 384px; 
+            height: 48px;
+            border-Radius: 8px;
+            border: none;
+            top: 13px;
+        }
+        img {
+            position: absolute;
+            left: 0px;
+            pointer-events: none;
+            top: 0;
+        }
+    }     
+    .dropdown {
+    position: relative;
+    margin-left: 10px;
+    font-family: 'Satoshi';
+
+
+    .dropbtn {
+        color: $colorprimary;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid $colorprimary;
+        align-items: center;
+        padding: 10px 20px;
+        gap: 15px;
+        position: absolute;
+        width: 235px;
+        height: 44px;
+        top: 0;
+        background: #FFFFFF;
+        border: 2px solid #4334C8;
+        border-radius: 8px;
+          .arrow {
+            border: solid $colorprimary;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+          }
+          .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+          }
+        }
+
+    .dropdown-content {   
+        display: none;
+    }    
+    .dropdown-content.show{
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        text-align: start;
+        padding: 10px 0;
+        position: absolute;
+        width: 235px;
+        height: 233px;
+        top: 50px;
+        overflow-y:scroll;      
+        background: #FFFFFF;
+        border: 2px solid #4334C8;
+        border-radius: 8px;
+        z-index: 1;
+    }
+        
+      .dropdown-content a {
+        color: $colorprimary;
+        font-family: "Gill Sans", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        width: 160px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: $colorprimary2;
+       }
+      
+      .dropdown:hover .dropbtn {
+        background-color: $colorwhite;
+      }
+
+    }
+    .dropdown2{
+        margin: 0 245px;
+    }
+}
+.Home{
+  .Lesfavoris{
+    position: sticky;
+  }
+  
+  table {
+    display: inline-block;
+    width: 65%;
+    margin-top: 0;
+    margin-left: 220px;
+    background: #FFFFFF;
+    border-radius: 9px;
+    @media only screen and (min-width: 1000px) and (max-width: 1200px) {
+      margin-left: 160px;
+    }
+    th {
+      text-align: start;
+      padding: 15px;
+      font-size: 8px;
+      background-color: #FFFFFF;
+      top: 0;
+      .arrow {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        margin-left: 10px;
+        z-index: 0;
+      }
+      .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+    td{
+      border-bottom: 1px solid #ddd;
+      padding: 8px;
+      font-size: 8px;
+      width: 110px;
+      height: 15px;
+    }
+  }
+}
+.Lesfavoris{
+    color: #F7F7F7;
+    position: absolute;
+    width: 15%;
+    font-size: 10px;
+    height: 38px;
+    left: 85%;
+    top: 90%;
+    // position: sticky;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background: #4334C8;
+    border: 2px solid #4334C8;
+    border-radius: 10px;
+    p, img{
+        margin: 0 auto;
+        margin-right: 5px;
+        display: inline-block;
+        overflow: hidden;
+    }
+}
+.cardAnime {
+    position: relative;
+    .Lesfavoris{
+      position: absolute;
+    }
+    .btn {
+        position: absolute;
+        top: 120px;
+        left: 50px;
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 18px;
+        border: none;
+        border-radius: 9px;
+        background-color: $colorprimary;
+        color: $colorwhite;
+        text-decoration: none;
+        font-size: 14px;
+        cursor: pointer;
+        z-index: 1;
+        @media only screen and (max-width: 1200px){
+          left: 0;
+          font-size: 10px;
+          padding: 5px 14px;
+        }
+      }   
+      .icon {
+        margin-right: 10px;
+      }
+    .imagePoster{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0); 
+        width: 900px;
+        height: 250px;
+        border-radius: 20px;
+        top: 70px;
+        z-index: 0;
+    }
+    .alertImagecover{
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0); 
+      width: 1000px;
+      height: 300px;
+      border-radius: 20px;
+      background-color: #333;
+      top: 50px;
+      span{
+        color: red;
+        font-size: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 110px;
+      }
+    }
+    .imageCover{
+        position: absolute;
+        width: 170px;
+        height: 270px;
+        left: 20%;
+        top: 250px;
+        border-radius: 20px;
+    }
+    .infoAnime{
+      position: absolute;
+      left: 440px;
+      top: 370px;
+      width: 570px;
+      @media only screen and (max-width: 1200px){
+        left: 390px;
+      }
+      .titlerange{
+        .title{
+          display: inline-block;
+          font-family: 'Satoshi';
+          font-size: 20px;
+          font-weight: bold;
+          color: #1A1C1C;
+          margin: 0 5px 5px 5px;
+        }
+        .range{
+          display: inline-block;
+          font-size: 15px;
+          margin-bottom: 10px;
+        }
+      }
+      .ajoutRetir{
+        .btnfav{
+          width: 25%;
+          font-size: 10px;
+          height: 38px;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          border: 2px solid #4334C8;
+          border-radius: 10px;
+          margin-bottom: 10px;
+          p, img{
+              margin: 0 auto;
+              margin-right: 5px;
+              display: inline-block;
+              overflow: hidden;
+          }
+        }
+        .btnfav.AjouFav{
+          color: #4334C8;
+          background: #F7F7F7;
+        }
+        .btnfav.RetirFav{
+          color: #F7F7F7;
+          background: blue;
+        }
+      }
+      .descrip{
+        font-size: 12px;
+      }
+
+    }
+    @media only screen and (max-width: 1200px){
+      .imagePoster{
+        width: 900px;
+        height: 200px;
+    }
+    .imageCover{
+        width: 140px;
+        height: 230px;
+        top: 230px;
+    }
+    }
+
+
+}
+.Loadingdata{
+    color: black;
+    position: absolute;
+    width: 15%;
+    font-size: 50px;
+    height: 38px;
+    left: 45%;
+    top: 60%;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    // background: $colorprimary2;
+    border-radius: 10px;
+}
+.Dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    animation: bounce 1s ease-in-out infinite;
+  }
+
+  .dot:nth-child(1) {
+    display: inline-block;
+    left: 48%;
+    top: 93%;
+  }
+
+  .dot:nth-child(2) {
+    display: inline-block;
+    left: 52%;
+    top: 93%;
+  }
+
+  .dot:nth-child(3) {
+    display: inline-block;
+    left: 56%;
+    top: 93%;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-30px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+.catalogue{
+    font-style: normal;
+    // font-weight: 700;
+    font-size: 28px;
+    color: #4334C8;
+    margin-top: 40px;
+    margin-left: 220px;
+    margin-bottom: 0;
+}
+
+.FavorisPage{
+  padding: 20px 10%;
+  .favorisCatBout{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      margin-bottom: 30px;
+      .Fav{
+          font-family: 'Satoshi';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 28px;
+          color: $colorprimary
+      }
+
+  }
+  .animated-style {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    animation: pulse 1s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 18px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    background-color: $colorprimary;
+    color: $colorwhite;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+  }   
+  .icon {
+    margin-right: 10px;
+  }      
+
+}
+.AnimeFavoris {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @media only screen and (min-width: 1000px) and (max-width: 1200px) {
+        gap: 30px;
+      }
+    .imageCoverFav{
+        width: 250px;
+        height: 350px;
+        border-radius: 20px;
+        // margin: auto;
+    }
+
+}
+// Loading Spinner
+.spinner {
+    background-color: #F7F7F7;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 100px auto;
+}
+    
+.bounce1, .bounce2, .bounce3 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: bounce 3s infinite ease-in-out;
+}
+    
+@keyframes bounce {
+  0%, 100% { 
+    transform: scale(0);
+  } 50% {
+    transform: scale(1);
+  }
+}
+    
+.bounce2 {
+  animation-delay: -1s; 
+}
+
+.bounce3 {
+  animation-delay: -2s; 
+}
+
+button{
+  cursor: pointer;
+}
+  
+
+// Page not Found
+.notFound {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 100px;
+  height: 100vh;
+  h1 {
+    color: #444;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  p {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .retour {
+    color: #42b983;
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
+
+
+  
+  
+

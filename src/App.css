@@ -1,0 +1,258 @@
+body {
+  background: #F7F7F7;
+  box-sizing: border-box;
+  height: 104vh;
+}
+
+.menu {
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.menu .recherche {
+  position: relative;
+}
+.menu .recherche input {
+  padding-left: 56px;
+  padding: 10px, 16px, 10px, 16px;
+  width: 384px;
+  height: 48px;
+  border-Radius: 8px;
+  border: none;
+  top: 13px;
+}
+.menu .recherche img {
+  position: absolute;
+  left: 0px;
+  pointer-events: none;
+  top: 0;
+}
+.menu .dropdown {
+  position: relative;
+  margin-left: 10px;
+  font-family: "Satoshi";
+}
+.menu .dropdown .dropbtn {
+  color: #4334C8;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #4334C8;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 15px;
+  position: absolute;
+  width: 235px;
+  height: 44px;
+  top: 0;
+  background: #FFFFFF;
+  border: 2px solid #4334C8;
+  border-radius: 8px;
+}
+.menu .dropdown .dropbtn .arrow {
+  border: solid #4334C8;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.menu .dropdown .dropbtn .down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.menu .dropdown .dropdown-content {
+  display: none;
+}
+.menu .dropdown .dropdown-content.show {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 10px 0;
+  position: absolute;
+  width: 235px;
+  height: 233px;
+  top: 50px;
+  overflow-y: scroll;
+  background: #FFFFFF;
+  border: 2px solid #4334C8;
+  border-radius: 8px;
+}
+.menu .dropdown .dropdown-content a {
+  color: #4334C8;
+  font-family: "Gill Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 160px;
+  margin: 10px;
+  border-radius: 8px;
+}
+.menu .dropdown .dropdown-content a:hover {
+  background-color: #EAE8FF;
+}
+.menu .dropdown .dropdown:hover .dropbtn {
+  background-color: #F7F7F7;
+}
+.menu .dropdown2 {
+  margin: 0 245px;
+}
+
+.Lesfavoris {
+  color: #F7F7F7;
+  position: absolute;
+  width: 15%;
+  font-size: 10px;
+  height: 38px;
+  left: 85%;
+  top: 85%;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: #4334C8;
+  border: 2px solid #4334C8;
+  border-radius: 10px;
+}
+.Lesfavoris p, .Lesfavoris img {
+  margin: 0 auto;
+  margin-right: 5px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.cardAnime {
+  position: relative;
+}
+.cardAnime .btn {
+  position: absolute;
+  top: 250px;
+  left: 10px;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 9px;
+  background-color: #4334C8;
+  color: #F7F7F7;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+.cardAnime .icon {
+  margin-right: 10px;
+}
+.cardAnime .imagePoster {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 1000px;
+  height: 300px;
+  border-radius: 20px;
+  top: 200px;
+}
+.cardAnime .alertImagecover {
+  color: red;
+  margin: auto;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  top: 200px;
+}
+.cardAnime .imageCover {
+  position: absolute;
+  width: 170px;
+  height: 270px;
+  left: 20%;
+  top: 430px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 640px) {
+  .cardAnime .imagePoster {
+    width: 500px;
+    height: 100px;
+  }
+  .cardAnime .imageCover {
+    width: 100px;
+    height: 140px;
+  }
+}
+
+.Loadingdata {
+  color: black;
+  position: absolute;
+  width: 15%;
+  font-size: 50px;
+  height: 38px;
+  left: 45%;
+  top: 60%;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.catalogue {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  color: #4334C8;
+  margin-left: 220px;
+}
+
+.FavorisPage {
+  padding: 20px 10%;
+}
+.FavorisPage .favorisCatBout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.FavorisPage .favorisCatBout .Fav {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  color: #4334C8;
+}
+.FavorisPage .btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  background-color: #4334C8;
+  color: #F7F7F7;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+.FavorisPage .icon {
+  margin-right: 10px;
+}
+
+.AnimeFavoris {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+  .AnimeFavoris {
+    gap: 30px;
+  }
+}
+.AnimeFavoris .imageCoverFav {
+  width: 250px;
+  height: 350px;
+  border-radius: 20px;
+}/*# sourceMappingURL=App.css.map */
